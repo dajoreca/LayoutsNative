@@ -1,20 +1,61 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import react from "react";
+import { View, StyleSheet } from "react-native";
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <View style={styles.contenedor}>
+          <View style={styles.caja1}></View>
+          <View style={styles.caja2}></View>
+          <View style={styles.caja3}></View>
+          <View style={styles.caja4}></View>
+      </View>
+    </>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const styles = StyleSheet.create ({
+  contenedor:{
+    backgroundColor: 'cornflowerblue',
+    flex:1,
+    // flexDirection: 'column'          //de arriba hacia abajo (default)
+    flexDirection: 'row',             //de izquierda a derecha
+    // flexDirection: 'column-reverse'  //de abajo hacia arriba
+    // flexDirection: 'row-reverse'     //de derecha a izquierda
+    //justifyContent: 'flex-end',       //desplaza a la derecha o final
+    //justifyContent: 'flex-start',     //desplaza a la izquierda o inicio
+    //justifyContent: 'center',         //desplaza al centro
+    //justifyContent: 'space-between',  //distribuye a lo largo de la pantalla intercalados con el fondo, empezando en este ejemplo con el primer color
+    //justifyContent: 'space-evenly',   // distribuye a lo largo de la pantalla intercalados con el fondo, empezando en ese ejemplo con el color de fondo
+    justifyContent: 'space-around',    //distribuye a lo largo de la pantalla intercalados con el fondo, empezando en ese ejemplo con el color de fondo, pero dando separacion desigual
+    //alignItems: 'flex-start',           //"corta" el tamaño de las columnas, desde el inicio
+    //alignItems: 'flex-end',             //"corta" el tamaño de las columnas, desde el final
+    //alignItems: 'center',             //"corta" el tamaño de las columnas y las posiciona en el centro
+    //alignItems: 'baseline',             //"corta" el tamaño de las columnas, desde el inicio
+    alignItems: 'stretch',             //posiciona las columnas desde el inicio al final(no cambios aparentes) (es el default)
+
+
+  },
+  caja1:{
+    padding: 20,
+    backgroundColor:'navy',
+
+  },
+  caja2:{
+    padding: 20,
+    backgroundColor:'yellow',
+
+  },
+  caja3:{
+    padding: 20,
+    backgroundColor:'green',
+
+  },
+  caja4:{
+    padding: 20,
+    backgroundColor:'teal',
+
   },
 });
+
+export default App;
