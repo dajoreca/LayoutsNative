@@ -72,6 +72,42 @@ const App = () => {
                 </View>
             </View>
 
+            <Text style={styles.titulo}>Hospedajes en LA</Text>
+
+            <View
+              style={styles.listado}
+            >
+                <View style={styles.listadoItem}>
+                    <Image
+                        style={styles.mejoresDestinos}
+                        source={ require('./assets/img/hospedaje1.jpg')}
+                    />
+                    <Text>Casa 3 Habitaciones</Text>
+                </View>
+                <View style={styles.listadoItem}>
+                    <Image
+                        style={styles.mejoresDestinos}
+                        source={ require('./assets/img/hospedaje2.jpg')}
+                    />
+                    <Text>Casa Salon Amplio</Text>
+                </View>
+                <View style={styles.listadoItem}>
+                    <Image
+                        style={styles.mejoresDestinos}
+                        source={ require('./assets/img/hospedaje3.jpg')}
+                    />
+                    <Text>Casa Familiar</Text>
+                </View>
+                <View style={styles.listadoItem}>
+                    <Image
+                        style={styles.mejoresDestinos}
+                        source={ require('./assets/img/hospedaje4.jpg')}
+                    />
+                    <Text>Casa Cocina Amplia</Text>
+                </View>
+
+            </View>
+
           </View>
 
       </ScrollView>
@@ -101,6 +137,16 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 200,
     marginVertical: 5,
+  },
+  listado:{
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between'
+    
+  },
+  listadoItem:{
+    flexBasis:'49%' //Se usa este en vez de el width ya que hemos usado 'row'
+
   },
 
 });
